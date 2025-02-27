@@ -38,13 +38,13 @@ def addcode(request):
 def nums(request): 
     return render(request, 'maxnum.html')
 
-def maxNum(request): 
-    c = int(request.GET['num1'])
-    d = int(request.GET['num2'])
-    if(c < d): 
-        return HttpResponse(d)
-    else: 
-        return HttpResponse(c)
+# def maxNum(request): 
+#     c = int(request.GET['num1'])
+#     d = int(request.GET['num2'])
+#     if(c < d): 
+#         return HttpResponse(d)
+#     else: 
+#         return HttpResponse(c)
     
 def number(request):
     return  render(request, 'evenodd.html')
