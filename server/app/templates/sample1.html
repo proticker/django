@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+      h1{
+        color: coral;
+        background-color: black;
+        font-weight: 45px;
+        font-style: italic;
+        text-align: center;
+        border: 10px solid cyan;
+
+
+      }
+  </style>
+
+</head>
+<body bgcolor="blue">
+      <h1>Hello welcome to my page</h1>
+      <p>
+        <b>This page</b><br><i>is dedicated to </i></br>html
+      </p>
+      <h2>displaying image in django</h2>
+      <a href="index2">click here</a>
+      <img src="{% static 'images/photo.jpeg' %}" alt="Django image" width="200">
+      <img src="{% static 'images/photo2.jpg' %}" alt="Django image" width="200">
+</body>
+      <footer>Thanks to visit my website</footer>
+</html>

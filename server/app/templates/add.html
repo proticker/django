@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: url('{% static 'back_photo.jpg' %}')">
+
+   <div>
+    <form action="addcode">
+        <label for="1st no">1st no</label><br>
+        <input type="text" name="a1" placeholder="enter the 1st no"><br>
+        <label for="2ndt no">2nd no</label>
+        <input type="text" name="a2" placeholder="enter the 2nd no">
+        <button>submit</button>
+    </form> 
+   </div>
+</body>
+</html>
