@@ -97,3 +97,12 @@ def add_student(request):
         return HttpResponse(f"Student {student.name} added successfully!", content_type="text/plain")
 
     return render(request, "add_student.html")
+def login(request):
+    return render(request,'login.html')
+def log(request):
+    a= request.GET['email']
+    b= request.GET['password']
+    if userdata.objects.filter(Email=a,Password=b):
+        return render(request,'signup.html')
+    else:
+        return render(request,'login.html')

@@ -16,5 +16,8 @@ urlpatterns = [
     path('evenodd', views.evenodd),
     path('signup',views.signup),
     path('sign',views.sign),
-    path("addStudent",views.add_student, name= "add_Student")
+    path("addStudent",views.add_student, name= "add_Student"),
+    path('login/',views.login),
+    path('login/log',views.log),
+    path('login/signup',views.signup),
 ]
