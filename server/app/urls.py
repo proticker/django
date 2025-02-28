@@ -16,4 +16,5 @@ urlpatterns = [
     path('evenodd', views.evenodd),
     path('signup',views.signup),
     path('sign',views.sign),
+    path("addStudent",views.add_student, name= "add_Student")
 ]

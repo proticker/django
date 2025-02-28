@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from app.models import userdata 
+from app.models import Student
 
 # Create your views here. with arguments
 
@@ -68,4 +69,31 @@ def sign(request):
     u.save()
     return render(request,'signup.html')
 
-    
+def add_student(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        roll = request.POST.get("roll")
+        sec = request.POST.get("sec")
+        address = request.POST.get("address")
+        contact = request.POST.get("contact")
+        email = request.POST.get("email")
+        guardian_name = request.POST.get("guardian_name")
+        country = request.POST.get("country")
+        gender = request.POST.get("gender")
+
+        # Create Student Entry
+        student = Student.objects.create(
+            name=name,
+            roll=roll,
+            sec=sec,
+            address=address,
+            contact=contact,
+            email=email,
+            guardian_name=guardian_name,
+            country=country,
+            gender=gender
+        )
+
+        return HttpResponse(f"Student {student.name} added successfully!", content_type="text/plain")
+
+    return render(request, "add_student.html")

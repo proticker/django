@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+<body>
+    <h2>Add Student</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label for="roll">Roll Number:</label>
+        <input type="number" name="roll" required><br><br>
+
+        <label for="sec">Section:</label>
+        <input type="text" name="sec" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" name="address" required><br><br>
+
+        <label for="contact">Contact:</label>
+        <input type="text" name="contact" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label for="guardian_name">Guardian's Name:</label>
+        <input type="text" name="guardian_name" required><br><br>
+
+        <label for="country">Country:</label>
+        <input type="text" name="country" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <button type="submit">Add Student</button>
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
