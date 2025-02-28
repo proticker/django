@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
+from app.models import userdata 
 
 # Create your views here. with arguments
 
@@ -38,13 +39,13 @@ def addcode(request):
 def nums(request): 
     return render(request, 'maxnum.html')
 
-# def maxNum(request): 
-#     c = int(request.GET['num1'])
-#     d = int(request.GET['num2'])
-#     if(c < d): 
-#         return HttpResponse(d)
-#     else: 
-#         return HttpResponse(c)
+def maxNum(request): 
+    c = int(request.GET['num1'])
+    d = int(request.GET['num2'])
+    if(c < d): 
+        return HttpResponse(d)
+    else: 
+        return HttpResponse(c)
     
 def number(request):
     return  render(request, 'evenodd.html')
@@ -54,17 +55,17 @@ def evenodd(request):
         return HttpResponse("num is even")
     else:
         return HttpResponse("num is odd")
+def signup(request):
+    return render(request,'signup.html')
     
-     
+def sign(request):
+    u = userdata()
+    u.Name= request.GET['c1']
+    u.Email= request.GET['c2']
+    u.Contact=request.GET['c3']
+    u.Gender= request.GET['gender']
+    u.Password= request.GET['c5']
+    u.save()
+    return render(request,'signup.html')
 
-
-
-
-
-
-
-
-
-
-
-        
+    

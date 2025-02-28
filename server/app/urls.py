@@ -14,5 +14,6 @@ urlpatterns = [
     path('maxNum', views.maxNum),
     path('number', views.number), 
     path('evenodd', views.evenodd),
-    
+    path('signup',views.signup),
+    path('sign',views.sign),
 ]

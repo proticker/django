@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 5px;
+            padding: 7px;
+            background-color: coral;
+        }
+        h1{
+            color: deeppink;
+            background-color: black;
+            border: 7px;
+            border-radius: 20px;
+            border-color: burlywood;
+            padding: 5px;
+            margin-top: 3px;
+            box-sizing: border-box;
+            font-weight: 25px;
+            text-align: center;
+            text-transform: capitalize;
+            text-shadow: 5px;
+        }
+        h1:hover{
+            color: brown;
+            background-color: blue;
+        }
+        div{
+            margin: 7px;
+
+            padding: 5px;
+            border: 5px solid;
+            border-color: bisque;
+            box-sizing: content-box;
+            border-radius: 8px;
+            align-items: center;
+
+        }
+        form{
+            align-content: center;
+            animation: alternate-reverse;
+
+        }
+        button{
+            color: black;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <h1><b><u>Signup</b></u></h1>
+    <div>
+        <form action="sign">
+            <label for="Name">Name</label><br>
+            <input type="text" name="c1" placeholder="Enter the name"><br>
+            <label for="Email-id">Email-id</label>br
+            <input type="email" name="c2" placeholder="Enter the email-id"><br>
+            <label for="Contact">Contact</label><br>
+            <input type="number" name="c3" placeholder="Enter number"><br>
+            <label for="Gender">Gender</label><br>
+            Male<input type="radio" name="gender" value="Male"> 
+            Female<input type="radio" name="gender" value="Female">
+            Others<input type="radio"name="gender" value="Others"><br>
+            <label for="password">Password</label><br>
+            <div class="password-container">
+                <input type="password" id="password" name="c5" placeholder="Enter the password"><br>
+                <span class="eye-icon" id="eye-icon" onclick="togglePassword()">👁</span>
+            </div>
+            <button type>Submit</button><br><br>
+            If you are already resister <a href="#">
+                login here</a>
+
+        </form>
+    </div>
+    <script>
+    function togglePassword(){
+        var passwordField=document.getElementById('password');
+        var eyeIcon=document.getElementById('eye-icon');
+        if(passwordField==="password"){
+            passwordField.type="text";
+            eye.Icon.innerHTML="🙈";
+        }else{
+            passwordFiled.type="password";
+            eyeIcon.innerHTML="👁";
+        }
+    }
+</script>
+
+</body>
+</html>
