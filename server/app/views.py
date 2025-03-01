@@ -106,3 +106,6 @@ def log(request):
         return render(request,'signup.html')
     else:
         return render(request,'login.html')
+    
+def logout(request):
+    return render(request,'logout.html')

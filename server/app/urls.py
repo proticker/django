@@ -20,4 +20,8 @@ urlpatterns = [
     path('login/',views.login),
     path('login/log',views.log),
     path('login/signup',views.signup),
+    path('login/logout',views.logout),
+    path('logout/login',views.login),
+    
+    
 ]
