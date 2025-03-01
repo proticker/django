@@ -109,3 +109,7 @@ def log(request):
     
 def logout(request):
     return render(request,'logout.html')
+
+def show(request):
+    a=userdata.objects.all()
+    return render(request,'show.html',{'x':a})#json format

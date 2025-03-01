@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+     <tr><td>Name<td>
+        <td>Email<td>
+        <td>Contact<td>
+        <td>Gender<td>
+        <td>Passward</td>
+    </tr>
+    {%for i in x%}
+     <tr><td>{{i.Name}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Contact}}</td>
+        <td>{{i.Gender}}</td>
+        <td>{{i.Passward}}</td>
+    </tr>
+    {% endfor %}
+    
+    </table>
+</body>
+</html>
