@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse, JsonResponse
 from app.models import userdata 
 from app.models import Student
@@ -113,3 +113,21 @@ def logout(request):
 def show(request):
     a=userdata.objects.all()
     return render(request,'show.html',{'x':a})#json format
+
+def dele(request,id):
+    d=userdata.objects.get(id=id)
+    d.delete()
+    return redirect('../show')
+
+def edit(request,id):
+    e=userdata.objects.get(id=id)
+    return render(request,'edit.html',{'x':e})#jason format
+def encode(request,id):
+    d = userdata()
+    d.Name= request.GET['c1']
+    d.Email= request.GET['c2']
+    d.Contact=request.GET['c3']
+    d.Gender= request.GET['gender']
+    d.Password= request.GET['c5']
+    d.save()
+    return render(request,'show.html')

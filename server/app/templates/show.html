@@ -11,17 +11,18 @@
         <td>Email<td>
         <td>Contact<td>
         <td>Gender<td>
-        <td>Passward</td>
+        <td>Password</td>
     </tr>
     {%for i in x%}
      <tr><td>{{i.Name}}</td>
         <td>{{i.Email}}</td>
         <td>{{i.Contact}}</td>
         <td>{{i.Gender}}</td>
-        <td>{{i.Passward}}</td>
+        <td>{{i.Password}}</td>
+        <td><a href="del/{(i.id)}">Delete</a></td>
+        <td><a href="edit/{{i,id}}"Edit</a></td>
     </tr>
     {% endfor %}
-    
-    </table>
+  <table>
 </body>
 </html>

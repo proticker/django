@@ -23,5 +23,8 @@ urlpatterns = [
     path('login/logout',views.logout),
     path('logout/login',views.login),
     path('show',views.show),
-    
+    path('del/<int:id',views.dele),
+    path('edit/ <int:id>',views.edit),
+    path('encode/<int:id>',views.encode),
+
 ]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Edit profile</h2>
+    <div>
+        <form action="../encode/{{x:id}}">
+            <label for="Name">Name</label><br>
+            <input type="text" name="c1" placeholder="Enter the name" value="{{x.Name}}"><br>
+            <label for="Email-id">Email-id</label>br
+            <input type="email" name="c2" placeholder="Enter the email-id"value="{{x.Email}}"><br>
+            <label for="Contact">Contact</label><br>
+            <input type="number" name="c3" placeholder="Enter number"value="{{x.Contact}}";><br>
+            <label for="Gender">Gender</label><br>
+            Male<input type="radio" name="gender" value="Male"value="{{x.Gender}}"> 
+            Female<input type="radio" name="gender" value="Female"value="{{x.Gender}}">
+            Others<input type="radio"name="gender" value="Others"value="{{x.Gender}}"><br>
+            <label for="password">Password</label><br>
+            <div class="password-container">
+                <input type="password" id="password" name="c5" placeholder="Enter the password"value="{{x.password}}"><br>
+                <span class="eye-icon" id="eye-icon" onclick="togglePassword()">👁</span>
+            </div>
+            <button type>Submit</button><br><br>
+        </form>
+    </div>
+</body>
+</html>
